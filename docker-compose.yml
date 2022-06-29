@@ -1,0 +1,17 @@
+version: '3.5'
+# 网络配置
+networks:
+  backend:
+    driver: bridge # 设置网络模式
+# 服务容器配置
+services:
+  service.greet:
+    build:
+      context: ./
+      dockerfile: ./greet/Dockerfile
+    container_name: service.greet
+    ports:
+      - "8888:8888"
+    networks:
+      - backend
+    restart: always
