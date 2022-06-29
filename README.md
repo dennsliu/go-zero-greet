@@ -1,8 +1,13 @@
 创建greet服务
+
 $ mkdir go-zero-greet
+
 $ cd go-zero-greet
+
 $ go mod init go-zero-greet
+
 $ goctl api new greet
+
 $ go mod tidy
 
 接下来我们就可以在greetlogic.go中编写业务代码
